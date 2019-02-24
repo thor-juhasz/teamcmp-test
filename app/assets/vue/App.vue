@@ -1,8 +1,8 @@
 <template>
-    <div class="container">
+    <div class="container-fluid p-0" :style="{ backgroundColor: bgColor }">
         <nprogress-container></nprogress-container>
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-sm navbar-light bg-light">
             <router-link class="navbar-brand" to="/">Home</router-link>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -20,8 +20,6 @@
             </div>
         </nav>
 
-        <div class="test">test text</div>
-
         <router-view></router-view>
     </div>
 </template>
@@ -34,5 +32,21 @@
         components: {
             NprogressContainer
         },
+        data() {
+            return {
+                btnClicked: false
+            }
+        },
+        computed: {
+            bgColor() {
+                return this.btnClicked ? '#038eff' : '#ffffff';
+            }
+        },
+        methods: {},
+        mounted() {
+            this.$root.$on('swapColors', () => {
+                this.btnClicked = !this.btnClicked;
+            });
+        }
     }
 </script>

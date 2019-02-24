@@ -4,11 +4,19 @@
 @import '~bootstrap/scss/bootstrap';
 @import '~bootstrap-vue/dist/bootstrap-vue.css';
 
-/* test */
+div, button {
+  transition: background-color 0.5s linear;
+}
 
-
-/*
-
-div.test {
-  color: #ff0000;
-}*/
+.top a {
+  color: #f8f9fa;
+}
+.top a:hover {
+  text-decoration: none;
+}
+.img a {
+  color: #212529;
+}
+.green {
+  color: #16ff00;
+}
