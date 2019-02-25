@@ -5,7 +5,7 @@
         </div>
         <div class="message-text" :class="messageBg">
             <div class="arrow">&nbsp;</div>
-            {{ message }}
+            <span>{{ message }}</span>
         </div>
         <div class="message-icon-right">
             <div v-if="isReceived" :style="{ backgroundImage: 'url(' + receivedImage + ')' }"></div>

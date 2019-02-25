@@ -79,6 +79,9 @@ div.chat-page {
         flex-grow: 1;
         position: relative;
         padding: 15px;
+        span {
+          white-space: pre-wrap;
+        }
       }
 
       .arrow {

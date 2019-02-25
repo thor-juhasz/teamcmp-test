@@ -1,6 +1,6 @@
 <template>
     <div class="container-fluid history d-flex flex-column">
-        <Message :key="0" type="received" message="Hi there! How are you?"/>
+        <Message :key="0" type="received" :message="'Hi there!\nHow are you?'"/>
         <Message v-for="message in messages" :key="message.id"/>
     </div>
 </template>
