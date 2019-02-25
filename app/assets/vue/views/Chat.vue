@@ -1,5 +1,5 @@
 <template>
-    <div class="container-fluid">
+    <div class="container">
         <div class="row chat-page">
             <div class="col-12 top text-center bg-dark text-light">
                 <h2 class="mt-1 mb-1"><router-link to="/profile">Tiffany Trump</router-link></h2>
@@ -20,6 +20,7 @@
 
 <script>
     import History from './History';
+    import axios from 'axios';
 
     export default {
         name: 'chat',
@@ -45,7 +46,19 @@
             },
             sendMessage() {
                 let message = this.$refs.chatMessage.value;
-                console.log(message);
+                axios
+                    .post('/api/message', { message })
+                    .then(response => {
+                        console.log('Message:', message);
+                        if (response.hasOwnProperty('data')) {
+                            this.$refs.chatHistory.updateMessages();
+                        }
+                        console.log(response.data);
+                        this.$refs.chatMessage.value = '';
+                    })
+                    .catch(error => {
+                        console.error(error);
+                    });
             }
         }
     }

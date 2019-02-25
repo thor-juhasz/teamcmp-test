@@ -1,5 +1,5 @@
 <template>
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="col-12 top text-center bg-dark text-light">
                 <h2 class="mt-1 mb-1"><router-link to="/chat">Tiffany Trump</router-link></h2>

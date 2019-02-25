@@ -8,7 +8,9 @@
             <span>{{ message }}</span>
         </div>
         <div class="message-icon-right">
-            <div v-if="isReceived" :style="{ backgroundImage: 'url(' + receivedImage + ')' }"></div>
+            <router-link to="/profile">
+                <div v-if="isReceived" :style="{ backgroundImage: 'url(' + receivedImage + ')' }"></div>
+            </router-link>
         </div>
     </div>
 </template>

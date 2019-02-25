@@ -32,7 +32,7 @@ html, body {
   margin: 0;
   > div.container-fluid {
     height: 100%;
-    > div.container-fluid {
+    > div.container {
       height: 100%;
     }
   }
@@ -65,7 +65,7 @@ div.chat-page {
         margin-left: 15px;
       }
       .message-icon-left, .message-icon-right {
-        > div {
+        div {
           width: 70px;
           height: 70px;
           background-size: contain;
