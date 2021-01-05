@@ -16,7 +16,7 @@
     },
     "devDependencies": {
         "@symfony/webpack-encore": "^0.22.0",
-        "axios": "^0.18.1",
+        "axios": "^0.21.1",
         "bootstrap-vue": "^2.0.0-rc.13",
         "vue-loader": "^15.6.4",
         "vue-nprogress": "^0.1.5",
